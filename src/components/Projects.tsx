@@ -60,21 +60,29 @@ export default function Projects() {
                 i % 2 === 1 ? "md:text-right" : ""
               }`}
             >
-              {/* Project image placeholder */}
+              {/* Project image or placeholder */}
               <div
                 className={`md:col-span-7 ${i % 2 === 1 ? "md:col-start-6" : ""}`}
               >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-cyan-400/10 group-hover:bg-transparent rounded-lg transition-all z-10" />
                   <div className="aspect-video rounded-lg bg-navy-800 border border-slate-700/30 overflow-hidden flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="text-4xl mb-2 text-cyan-400/30">
-                        {project.category === "graphics" ? "◆" : "◇"}
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    ) : (
+                      <div className="text-center p-8">
+                        <div className="text-4xl mb-2 text-cyan-400/30">
+                          {project.category === "graphics" ? "◆" : "◇"}
+                        </div>
+                        <p className="text-xs font-mono text-slate-600">
+                          No screenshot
+                        </p>
                       </div>
-                      <p className="text-xs font-mono text-slate-600">
-                        Add screenshot to public/images/
-                      </p>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>

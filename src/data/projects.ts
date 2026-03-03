@@ -4,6 +4,7 @@ export interface Project {
   tech: string[];
   github?: string;
   live?: string;
+  image?: string;
   featured?: boolean;
   category: "graphics" | "data" | "other";
 }
@@ -12,55 +13,21 @@ export const projects: Project[] = [
   {
     title: "Ray Tracing Engine",
     description:
-      "A full raytracing engine supporting point, spot, and directional lights, texture mapping, BVH acceleration, jittered supersampling anti-aliasing, and soft shadows. Rendered complex models including the Stanford Bunny, Dragon, and David.",
+      "A full raytracing engine with point, spot, and directional lights, texture mapping, BVH acceleration, jittered supersampling anti-aliasing, and soft shadows. Rendered complex models including the Stanford Bunny, Dragon, Buddha, and David.",
     tech: ["C++", "GLSL", "BVH", "Ray-Tracing"],
     github: "https://github.com/KevinDruciak/Graphics_Raytracing",
+    image:
+      "https://raw.githubusercontent.com/KevinDruciak/Graphics_Raytracing/main/kdrucia1_HTML/kdrucia1.art/kdrucia1.art.2.bmp",
     featured: true,
     category: "graphics",
   },
   {
-    title: "OpenGL Rendering Pipeline",
+    title: "Songsterr Enhanced Search",
     description:
-      "An interactive OpenGL rendering system with support for all light types, camera operations, all geometric shapes, affine transformations, textures, and interactive scene elements like togglable lights and animated doors.",
-    tech: ["C++", "OpenGL", "GLSL", "Gouraud Shading"],
-    github: "https://github.com/KevinDruciak/Graphics_Rendering",
+      "A better way to search Songsterr guitar tabs — with popularity sorting, genre filtering, and enriched metadata powered by the Spotify API. Search the full tab library, sort by Spotify popularity, filter by genre, and browse by tag. Cached results in SQLite for instant repeat queries.",
+    tech: ["React", "TypeScript", "Vite", "Python", "FastAPI", "SQLite", "Spotify API"],
+    github: "https://github.com/KevinDruciak/songsterr_search",
     featured: true,
-    category: "graphics",
-  },
-  {
-    title: "Keyframe Animation System",
-    description:
-      "Animation system with multiple parameterizations (matrices, Euler angles, quaternions) and interpolation methods (nearest, linear, Catmull-Rom, B-spline). Includes video recording via screenshots and ray-traced renders.",
-    tech: ["C++", "OpenGL", "Quaternions", "Splines"],
-    github: "https://github.com/KevinDruciak/Graphics_Animation",
-    featured: true,
-    category: "graphics",
-  },
-  {
-    title: "Image Processing Suite",
-    description:
-      "Comprehensive image processing toolkit with noise generation, dithering algorithms (Floyd-Steinberg, ordered), edge detection, gaussian sampling, Beier-Neely morphing, and an oil painting fun filter.",
-    tech: ["C++", "Beier-Neely", "Gaussian", "Floyd-Steinberg"],
-    github: "https://github.com/KevinDruciak/Graphics_ImageProcessing",
-    featured: true,
-    category: "graphics",
-  },
-  {
-    title: "Cache Simulator",
-    description:
-      "A CPU cache simulator modeling different cache configurations and replacement policies to analyze hit/miss rates and performance characteristics.",
-    tech: ["C++", "Systems"],
-    github: "https://github.com/KevinDruciak/CacheSimulator",
-    featured: false,
-    category: "other",
-  },
-  {
-    title: "AppleJoose",
-    description:
-      "A Java application project demonstrating object-oriented design patterns and software engineering principles.",
-    tech: ["Java", "OOP"],
-    github: "https://github.com/KevinDruciak/AppleJoose",
-    featured: false,
     category: "other",
   },
 ];
