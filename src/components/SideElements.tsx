@@ -57,11 +57,11 @@ export default function SideElements() {
         className="fixed bottom-0 right-6 z-40 hidden xl:flex flex-col items-center gap-6"
       >
         <a
-          href="mailto:kevindruciak@gmail.com"
+          href="mailto:kevintdruciak@gmail.com"
           className="text-slate-400 hover:text-cyan-400 transition-colors font-mono text-xs tracking-widest"
           style={{ writingMode: "vertical-rl" }}
         >
-          kevindruciak@gmail.com
+          kevintdruciak@gmail.com
         </a>
         <div className="w-px h-24 bg-slate-400" />
       </motion.div>

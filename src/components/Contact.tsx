@@ -43,7 +43,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          href="mailto:kevindruciak@gmail.com"
+          href="mailto:kevintdruciak@gmail.com"
           className="inline-block px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all font-mono text-sm tracking-wide"
         >
           Say Hello

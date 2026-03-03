@@ -1,25 +1,30 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 const SKILLS = [
   "Python",
   "SQL",
-  "Apache Spark",
-  "Airflow",
-  "dbt",
+  "PySpark",
   "AWS",
-  "Kafka",
-  "Snowflake",
-  "PostgreSQL",
+  "Databricks",
   "Docker",
   "Terraform",
+  "CI/CD",
+  "Tableau",
+  "C/C++",
+  "Java",
   "TypeScript",
-  "C++",
   "OpenGL",
+  "WebGL",
   "GLSL",
+  "vtk.js",
   "Three.js",
+  "TensorFlow",
+  "PyTorch",
+  "Scikit-learn",
 ];
 
 const containerVariants = {
@@ -50,10 +55,13 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-slate-400 leading-relaxed mb-4"
             >
-              I&apos;m a data engineer who thrives on building scalable data
-              pipelines and infrastructure that power data-driven decisions. My
-              day-to-day involves designing and optimizing ETL workflows,
-              data models, and cloud-native architectures.
+              I&apos;m a Senior Data Engineer at{" "}
+              <span className="text-cyan-400">AARP</span> with a M.S. in
+              Computer Science (AI/ML) from Georgia Tech and a B.S. from Johns
+              Hopkins. I specialize in architecting scalable data pipelines,
+              cloud infrastructure, and ML-driven solutions &mdash; having
+              generated over $380K in annual savings through AWS and Databricks
+              optimizations while supporting a $700M business.
             </motion.p>
 
             <motion.p
@@ -64,11 +72,12 @@ export default function About() {
               className="text-slate-400 leading-relaxed mb-4"
             >
               Beyond data, I have a deep passion for{" "}
-              <span className="text-cyan-400">computer graphics</span>. From
-              building raytracing engines with BVH acceleration and soft shadows
-              to creating OpenGL rendering pipelines, keyframe animation systems,
-              and image processing algorithms &mdash; I love pushing pixels and
-              exploring the math behind visual computing.
+              <span className="text-cyan-400">computer graphics</span>. At
+              Johns Hopkins I built a raytracing engine with BVH acceleration and
+              soft shadows, an OpenGL rendering pipeline, a keyframe animation
+              system, and an image processing suite. At Corfix Project, I
+              developed interactive 3D heart model visualizations using vtk.js
+              and WebGL to enable patient-specific medical solutions.
             </motion.p>
 
             <motion.p
@@ -78,9 +87,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-slate-400 leading-relaxed"
             >
-              The intersection of data and graphics is where I find the most
-              excitement &mdash; whether it&apos;s visualizing complex datasets or
-              building interactive 3D experiences like the one on this page.
+              I also contribute to AI advancement as a Software Engineer Expert
+              at Handshake AI and Data Science Expert at Mercor, where I
+              develop gold-standard solutions and curate training data to improve
+              state-of-the-art Large Language Models.
             </motion.p>
           </div>
 
@@ -93,20 +103,15 @@ export default function About() {
           >
             <div className="relative w-full aspect-square max-w-[280px] mx-auto">
               <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-lg translate-x-4 translate-y-4" />
-              <div className="relative w-full h-full rounded-lg bg-navy-800 border border-slate-700/50 overflow-hidden flex items-center justify-center">
-                {/* Placeholder for headshot */}
-                <div className="text-slate-600 text-center p-6">
-                  <div className="w-20 h-20 rounded-full bg-navy-700 mx-auto mb-3 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-cyan-400/50 font-mono">
-                      KD
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-500 font-mono">
-                    Add your photo to
-                    <br />
-                    public/images/headshot.jpg
-                  </p>
-                </div>
+              <div className="relative w-full h-full rounded-lg overflow-hidden">
+                <Image
+                  src="/images/headshot.png"
+                  alt="Kevin Druciak"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  sizes="280px"
+                  priority
+                />
               </div>
             </div>
           </motion.div>
