@@ -10,11 +10,11 @@ import SideElements from "@/components/SideElements";
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full min-h-screen overflow-x-hidden relative">
       <BackgroundShapes />
       <Navbar />
       <SideElements />
-      <main className="relative z-10">
+      <main className="relative z-10 w-full">
         <Hero />
         <About />
         <Experience />
@@ -22,6 +22,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

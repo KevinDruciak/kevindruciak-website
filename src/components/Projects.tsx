@@ -43,8 +43,8 @@ const other = projects.filter((p) => !p.featured);
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 md:py-28 px-6 lg:px-12 xl:px-20">
-      <div className="max-w-5xl mx-auto">
+    <section id="projects" className="py-20 md:py-28 px-6 md:px-12 lg:px-20">
+      <div className="w-full max-w-5xl mx-auto">
         <SectionHeading number="03" title="Projects" />
 
         {/* Featured projects */}
@@ -56,7 +56,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`relative grid lg:grid-cols-12 items-center gap-6 ${
+              className={`relative grid grid-cols-1 lg:grid-cols-12 items-center gap-6 ${
                 i % 2 === 1 ? "lg:text-right" : ""
               }`}
             >

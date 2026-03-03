@@ -14,18 +14,16 @@ export default function HeroScene() {
     <Canvas
       camera={{ position: [0, 0, 6], fov: 60 }}
       dpr={[1, 1.5]}
-      gl={{ antialias: false, alpha: false }}
+      gl={{ antialias: false, alpha: true }}
       style={{
         position: "absolute",
         top: 0,
         left: 0,
         width: "100%",
         height: "100%",
-        background: "#0a0e1a",
       }}
     >
       <Suspense fallback={null}>
-        <color attach="background" args={["#0a0e1a"]} />
         <fog attach="fog" args={["#0a0e1a", 6, 15]} />
         <ParticleField />
         <EffectComposer multisampling={0}>

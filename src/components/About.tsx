@@ -41,12 +41,12 @@ const chipVariants = {
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 px-6 lg:px-12 xl:px-20">
-      <div className="max-w-4xl mx-auto">
+    <section id="about" className="py-20 md:py-28 px-6 md:px-12 lg:px-20">
+      <div className="w-full max-w-4xl mx-auto">
         <SectionHeading number="01" title="About Me" />
 
-        <div className="grid md:grid-cols-[3fr_2fr] gap-10 md:gap-14 items-start">
-          <div>
+        <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
+          <div className="flex-1 min-w-0">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -98,9 +98,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative"
+            className="flex-shrink-0 w-full md:w-auto"
           >
-            <div className="relative w-full aspect-square max-w-[260px] mx-auto mr-4">
+            <div className="relative w-[260px] aspect-square mx-auto">
               <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-lg translate-x-3 translate-y-3" />
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <img

@@ -6,8 +6,8 @@ import { experiences } from "@/data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 md:py-28 px-6 lg:px-12 xl:px-20">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-20 md:py-28 px-6 md:px-12 lg:px-20">
+      <div className="w-full max-w-4xl mx-auto">
         <SectionHeading number="02" title="Experience" />
 
         <div className="relative">
@@ -27,9 +27,9 @@ export default function Experience() {
                 {/* Timeline dot */}
                 <div className="absolute left-[6px] md:left-8 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-navy-950 border-2 border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.3)]" />
 
-                <div className="group p-6 rounded-lg border border-slate-700/30 bg-navy-900/30 hover:border-cyan-400/20 hover:bg-navy-800/30 transition-all">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                    <div>
+                <div className="group p-4 md:p-6 rounded-lg border border-slate-700/30 bg-navy-900/30 hover:border-cyan-400/20 hover:bg-navy-800/30 transition-all overflow-hidden">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 gap-1">
+                    <div className="min-w-0">
                       <h3 className="text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors">
                         {entry.role}
                       </h3>
@@ -37,7 +37,7 @@ export default function Experience() {
                         {entry.company}
                       </p>
                     </div>
-                    <span className="text-sm font-mono text-slate-500 mt-1 md:mt-0">
+                    <span className="text-sm font-mono text-slate-500 mt-1 md:mt-0 flex-shrink-0">
                       {entry.period}
                     </span>
                   </div>

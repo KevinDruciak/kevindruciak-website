@@ -37,7 +37,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="w-full max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <button
           onClick={() => handleClick("#hero")}
           className="font-mono text-lg font-bold text-cyan-400 hover:text-cyan-300 transition-colors tracking-tight"
