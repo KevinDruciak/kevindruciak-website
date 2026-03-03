@@ -43,7 +43,7 @@ const other = projects.filter((p) => !p.featured);
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32 px-6">
+    <section id="projects" className="py-20 md:py-28 px-6 lg:px-12 xl:px-20">
       <div className="max-w-5xl mx-auto">
         <SectionHeading number="03" title="Projects" />
 
@@ -56,13 +56,13 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`relative grid md:grid-cols-12 items-center gap-4 ${
-                i % 2 === 1 ? "md:text-right" : ""
+              className={`relative grid lg:grid-cols-12 items-center gap-6 ${
+                i % 2 === 1 ? "lg:text-right" : ""
               }`}
             >
               {/* Project image or placeholder */}
               <div
-                className={`md:col-span-7 ${i % 2 === 1 ? "md:col-start-6" : ""}`}
+                className={`lg:col-span-7 ${i % 2 === 1 ? "lg:col-start-6" : ""}`}
               >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-cyan-400/10 group-hover:bg-transparent rounded-lg transition-all z-10" />
@@ -89,10 +89,10 @@ export default function Projects() {
 
               {/* Project info */}
               <div
-                className={`md:col-span-6 ${
+                className={`lg:col-span-6 ${
                   i % 2 === 1
-                    ? "md:col-start-1 md:row-start-1"
-                    : "md:col-start-7"
+                    ? "lg:col-start-1 lg:row-start-1"
+                    : "lg:col-start-7"
                 } relative z-20`}
               >
                 <p className="font-mono text-cyan-400 text-xs mb-2 tracking-wider">
@@ -107,7 +107,7 @@ export default function Projects() {
                   </p>
                 </div>
                 <div
-                  className={`flex flex-wrap gap-2 mb-4 ${i % 2 === 1 ? "md:justify-end" : ""}`}
+                  className={`flex flex-wrap gap-2 mb-4 ${i % 2 === 1 ? "lg:justify-end" : ""}`}
                 >
                   {project.tech.map((t) => (
                     <span
@@ -119,7 +119,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <div
-                  className={`flex gap-3 ${i % 2 === 1 ? "md:justify-end" : ""}`}
+                  className={`flex gap-3 ${i % 2 === 1 ? "lg:justify-end" : ""}`}
                 >
                   {project.github && (
                     <a
