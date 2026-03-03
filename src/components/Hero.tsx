@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0a0e1a]"
     >
       <HeroScene />
 

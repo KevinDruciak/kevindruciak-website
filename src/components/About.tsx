@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
@@ -104,13 +103,10 @@ export default function About() {
             <div className="relative w-full aspect-square max-w-[280px] mx-auto">
               <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-lg translate-x-4 translate-y-4" />
               <div className="relative w-full h-full rounded-lg overflow-hidden">
-                <Image
+                <img
                   src="/images/headshot.png"
                   alt="Kevin Druciak"
-                  fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  sizes="280px"
-                  priority
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
             </div>
