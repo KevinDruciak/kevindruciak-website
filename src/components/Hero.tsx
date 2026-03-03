@@ -16,6 +16,8 @@ export default function Hero() {
     >
       <HeroScene />
 
+      <div className="absolute inset-0 z-[5] bg-[#0a0e1a]/90" />
+
       <div className="relative z-10 text-center px-6 w-full max-w-3xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
