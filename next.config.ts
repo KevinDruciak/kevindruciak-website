@@ -8,10 +8,16 @@ const nextConfig: NextConfig = {
   turbopack: {},
   transpilePackages: ["three"],
   async rewrites() {
-    return [
-      { source: "/mirela", destination: `${MIRELA_ORIGIN}/mirela` },
-      { source: "/mirela/:path*", destination: `${MIRELA_ORIGIN}/mirela/:path*` },
-    ];
+    // beforeFiles: /mirela/_next/* asset requests must be proxied before
+    // Vercel's static-asset layer swallows them with a 404.
+    return {
+      beforeFiles: [
+        { source: "/mirela", destination: `${MIRELA_ORIGIN}/mirela` },
+        { source: "/mirela/:path*", destination: `${MIRELA_ORIGIN}/mirela/:path*` },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
   },
 };
 
