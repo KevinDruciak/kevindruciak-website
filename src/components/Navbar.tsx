@@ -67,6 +67,15 @@ export default function Navbar() {
               Resume
             </a>
           </li>
+          <li>
+            <a
+              href="/mirela"
+              aria-label="ribbit"
+              className="block text-base opacity-40 grayscale hover:opacity-100 hover:grayscale-0 hover:scale-125 transition-all duration-300"
+            >
+              🐸
+            </a>
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -115,6 +124,15 @@ export default function Navbar() {
                   className="text-lg px-6 py-2 border border-cyan-400/50 text-cyan-400 rounded hover:bg-cyan-400/10 transition-all font-medium"
                 >
                   Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/mirela"
+                  aria-label="ribbit"
+                  className="block text-xl opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all"
+                >
+                  🐸
                 </a>
               </li>
             </ul>
