@@ -76,15 +76,6 @@ export default function Navbar() {
               🐸
             </a>
           </li>
-          <li className="-ml-5">
-            <a
-              href="/card"
-              aria-label="para você"
-              className="block text-base opacity-40 grayscale hover:opacity-100 hover:grayscale-0 hover:scale-125 transition-all duration-300"
-            >
-              💌
-            </a>
-          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -135,20 +126,13 @@ export default function Navbar() {
                   Resume
                 </a>
               </li>
-              <li className="flex gap-5">
+              <li>
                 <a
                   href="/mirela"
                   aria-label="ribbit"
                   className="block text-xl opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all"
                 >
                   🐸
-                </a>
-                <a
-                  href="/card"
-                  aria-label="para você"
-                  className="block text-xl opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all"
-                >
-                  💌
                 </a>
               </li>
             </ul>

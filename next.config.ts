@@ -7,6 +7,10 @@ const MIRELA_ORIGIN = process.env.MIRELA_APP_ORIGIN ?? "https://mirela-jobs.verc
 const nextConfig: NextConfig = {
   turbopack: {},
   transpilePackages: ["three"],
+  // The letter moved inside the (logged-in) frog app; keep old links working.
+  async redirects() {
+    return [{ source: "/card", destination: "/mirela/card", permanent: false }];
+  },
   async rewrites() {
     // beforeFiles: /mirela/_next/* asset requests must be proxied before
     // Vercel's static-asset layer swallows them with a 404.
