@@ -16,8 +16,9 @@ export const projects: Project[] = [
       "A full raytracing engine with point, spot, and directional lights, texture mapping, BVH acceleration, jittered supersampling anti-aliasing, and soft shadows. Rendered complex models including the Stanford Bunny, Dragon, Buddha, and David.",
     tech: ["C++", "GLSL", "BVH", "Ray-Tracing"],
     github: "https://github.com/KevinDruciak/Graphics_Raytracing",
-    image:
-      "https://raw.githubusercontent.com/KevinDruciak/Graphics_Raytracing/main/kdrucia1_HTML/kdrucia1.art/kdrucia1.art.2.bmp",
+    // A 1600px copy of kdrucia1.art.2.bmp from the Graphics_Raytracing repository. The original is a
+    // 36 MB bitmap (4000x3000); linking to it made every visitor download all of it.
+    image: "/images/raytracing-chess.webp",
     featured: true,
     category: "graphics",
   },
